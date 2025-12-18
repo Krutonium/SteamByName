@@ -8,6 +8,7 @@ class Program
 
     static void Main(string[] args)
     {
+        Console.WriteLine("Steam By Name now creating Symlinks...");
         string[] LibraryFile = File.ReadAllLines(Path.Combine(SteamApps, "libraryfolders.vdf"));
         List<string> LibraryLocations = new List<string>();
         foreach (string library in LibraryFile)
@@ -88,5 +89,6 @@ class Program
                 File.CreateSymbolicLink(byNamePath, compatDataGamePath);
             }
         }
+        Console.WriteLine("Finished!");
     }
 }
