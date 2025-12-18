@@ -1,4 +1,4 @@
-{ lib, buildDotnetModule, dotnetCorePackages, ffmpeg, yt-dlp }:
+{ lib, buildDotnetModule, dotnetCorePackages }:
 
 buildDotnetModule rec {
   pname = "SteamByName";
