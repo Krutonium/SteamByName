@@ -72,6 +72,8 @@ class Program
                         string[] nameBundle = acf.Split('\t');
                         string nameString = nameBundle[3];
                         nameString = nameString.Replace("\"", "");
+                        nameString = nameString.Replace("/", "_");
+                        nameString = nameString.Replace("\\", "_");
                         NAME = nameString;
 #if DEBUG
                         Console.WriteLine($"Found {nameString}"); 
